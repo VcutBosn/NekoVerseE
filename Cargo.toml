@@ -1,0 +1,19 @@
+[package]
+name = "nekoverse"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+slint = { version = "1.19", features = ["backend-android-activity-06"] }
+
+[build-dependencies]
+slint-build = "1.19"
+
+[package.metadata.android]
+package = "com.example.nekoverse"
+build_targets = ["aarch64-linux-android"]
+min_sdk_version = 26
+target_sdk_version = 35
